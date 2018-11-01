@@ -3,6 +3,7 @@ package com.sc.test.Test;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Random;
 import java.util.Set;
 
 public class ThreadScopeShareDate {
@@ -13,7 +14,7 @@ public class ThreadScopeShareDate {
 		for (int i = 0; i < 3; i++) {
 			new Thread(new Runnable() {
 				public void run() {
-					int data = (int) (Math.random() * 1000);
+					int data = (int) (new Random().nextInt(1000));
 					dataMap.put(Thread.currentThread(), data);
 					System.out.println("currentThread" + Thread.currentThread().getName() + "data :" + data);
 					Set<Thread> keys = dataMap.keySet();

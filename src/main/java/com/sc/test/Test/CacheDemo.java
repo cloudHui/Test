@@ -36,7 +36,8 @@ public class CacheDemo {
 				readWriteLock.writeLock().lock();
 				try {
 					if (date == null) {
-						date = "read from db";// read from Db
+						/**read from Db*/
+						date = "read from db";
 						cache.put(key, date);
 					}
 				} finally {

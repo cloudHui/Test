@@ -25,7 +25,7 @@ public class CollectionModifyException {
 		Iterator<User> iterator = user.iterator();
 		while (iterator.hasNext()) {
 			User user2 = iterator.next();
-			if (user2.getName().equals("1")) {
+			if ("1".equals(user2)) {
 //				user.remove(user2);
 				iterator.remove();
 			} else {

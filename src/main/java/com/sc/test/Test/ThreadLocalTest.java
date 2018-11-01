@@ -2,6 +2,7 @@ package com.sc.test.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class ThreadLocalTest {
 
@@ -12,14 +13,15 @@ public class ThreadLocalTest {
 	public static void main(String[] args) {
 		for (int i = 0; i < 3; i++) {
 			new Thread(new Runnable() {
+				@Override
 				public void run() {
-					int data = (int) (Math.random() * 1000);
-					// threadLocal.set(data);
+					int data = (int) (new Random().nextInt(1000));
+					/**threadLocal.set(data);*/
 					ThreadDate threadDate = ThreadDate.getThreadInstance();
 					threadDate.setName("name:" + data);
 					threadDate.setAge(data);
 					threadLocal.set(threadDate);
-					Map<String, Integer> map1 = new HashMap<String, Integer>();
+					Map<String, Integer> map1 = new HashMap<String, Integer>(10);
 					for (Integer  string : map1.values()){
 						System.out.println("string " + string);
 					}
@@ -52,7 +54,7 @@ public class ThreadLocalTest {
 }
 
 class ThreadDate {
-	// private static ThreadDate ThreadIntance = null;
+	/**private static ThreadDate ThreadIntance = null;*/
 	private static ThreadLocal<ThreadDate> map = new ThreadLocal<ThreadDate>();
 	private String name;
 	private int age;

@@ -34,7 +34,7 @@ public class ShortTest {
 			br = new BufferedReader(isr);
 			String data = br.readLine();
 			while (data != null) {
-				char c[] = data.toCharArray();
+				char[] c = data.toCharArray();
 				for (int i = 0; i < c.length; i++) {
 					System.out.print(c[i]);
 					if (c[i] == '>') {

@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class CurruntUtilLock {
 
-	// @SuppressWarnings("deprecation")
+	/**@SuppressWarnings("deprecation")*/
 	public static void main(String[] args) {
 
 		// System.out.println(new Date().getSeconds());
@@ -55,7 +55,7 @@ public class CurruntUtilLock {
 	}
 
 	static class Outputer {
-		// @SuppressWarnings("deprecation")
+		/**@SuppressWarnings("deprecation")*/
 		Lock lock = new ReentrantLock();
 
 		private void outputer(String name) {
@@ -75,7 +75,7 @@ public class CurruntUtilLock {
 
 		}
 
-		// @SuppressWarnings("deprecation")
+		/** @SuppressWarnings("deprecation")*/
 		private synchronized void outputer1(String name) {
 			for (char i : name.toCharArray()) {
 				System.out.print(i + "  ");

@@ -2,7 +2,7 @@ package com.sc.test.Test;
 
 /**
  * Hello world!
- *
+ * @author cloud
  */
 public class App {
 	public static void main(String[] args) {
@@ -29,6 +29,7 @@ public class App {
 		};
 		thread.start();
 		Thread thread2 = new Thread(new  Runnable() {
+			@Override
 			public void run() {
 				while(true) {
 					try {
@@ -44,6 +45,7 @@ public class App {
 		
 		
 		new Thread(new Runnable() {
+			@Override
  			public void run() {
 				while(true) {
 					try {
@@ -55,6 +57,7 @@ public class App {
 				}
 			}
 		}) {
+			@Override
 			public void run() {
 				while(true) {
 					try {

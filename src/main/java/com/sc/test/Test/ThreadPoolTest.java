@@ -1,9 +1,15 @@
 package com.sc.test.Test;
 
+import net.sf.cglib.proxy.Enhancer;
+
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import org.springframework.cglib.proxy.Enhancer;
+//import org.springframework.cglib.proxy.Enhancer;
+//import java.lang.reflect.Method;
+//import net.sf.cglib.proxy.Enhancer;
+//import net.sf.cglib.proxy.MethodInterceptor;
+//import net.sf.cglib.proxy.MethodProxy;
 
 public class ThreadPoolTest {
 	public static void main(String[] args) {

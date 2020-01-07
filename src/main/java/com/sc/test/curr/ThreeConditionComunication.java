@@ -1,4 +1,4 @@
-package com.sc.test.Test;
+package com.sc.test.curr;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

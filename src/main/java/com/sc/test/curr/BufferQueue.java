@@ -1,4 +1,4 @@
-package com.sc.test.Test;
+package com.sc.test.curr;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -23,6 +23,7 @@ public class BufferQueue {
 		final BufferQueue bQueue = new BufferQueue();
 		new Thread(new Runnable() {
 
+			@Override
 			public void run() {
 				while (true) {
 					Object object = new Object();
@@ -120,7 +121,7 @@ public class BufferQueue {
 	}
 
 	private Object getThey() {
-		Object x = null;
+		Object x;
 		lock.lock();
 		try {
 			while (count == 0) {

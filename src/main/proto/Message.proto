@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_package = "com.sc.msg";//包名
+option java_outer_classname = "MessageBuf";//类名
+
+
+message BindAccountReq {
+
+     int32 platformType = 1;//第三方平台编号
+     string code = 2;//通过第三方登录获得的唯一码，服务器用来去第三方获取登录相关信息
+     int32 bindIdType = 3;//绑定的账号的类型；0：玩家ID；1：玩家字符串唯一账号
+     string bindId = 4;//要绑定的账号
+     int32 coverFlag = 5;//不覆盖已有账号；1：强制覆盖已有账号
+}

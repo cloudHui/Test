@@ -1,4 +1,4 @@
-package com.sc.test.Test;
+package com.sc.test.curr;
 
 /**
  * * @author Cloud Liu

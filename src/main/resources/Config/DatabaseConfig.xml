@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataConfig>
+    <DataConf id="1" roleType="RW">
+        <Ip>localmysql.66games.cn</Ip>
+        <Port>6379</Port>
+        <Username>root</Username>
+        <PassWord>123456</PassWord>
+    </DataConf>
+</DataConfig>

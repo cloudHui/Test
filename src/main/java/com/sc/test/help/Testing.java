@@ -1,8 +1,13 @@
 package com.sc.test.help;
 
+import com.sc.test.config.DataConfig;
+import com.sc.test.config.RedisConfig;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -32,5 +37,22 @@ public class Testing {
 //        DateTime dateTimeBefor = dateTime.minusYears(1).monthOfYear().setCopy(3).dayOfMonth().withMaximumValue();
         DateTime dateTimeBefore = dateTime.minusMonths(1);
         System.out.println(dateTimeBefore.toString("yyyy-MM-dd HH:mm:ss"));//2017-09-30
+
+        DataConfig  config = ConfigUtil.loadConfig("Config" + File.separator + "DataBaseConfig.xml", DataConfig.class);
+        DataConfig.DataConf conf = config.getDataConf().get(0);
+//        RedisConfig redisConfig =  RedisConfig.getInstance();
+//        System.out.print(redisConfig + ":" + conf);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        for (int before = 0; before < 8; before++) {
+            int beforeDay = 1;
+            if (before == 0) {
+                beforeDay = 0;
+            }
+            calendar.set(Calendar.DATE, calendar.get(Calendar.DATE) - beforeDay);
+            System.out.println(sdf.format(calendar.getTime()));
+        }
     }
 }

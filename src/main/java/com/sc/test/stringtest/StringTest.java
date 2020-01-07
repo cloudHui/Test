@@ -1,9 +1,6 @@
 package com.sc.test.stringtest;
 
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @Author: cloud
@@ -13,6 +10,7 @@ import java.util.Scanner;
 public class StringTest {
 
     public static void main(String[] args){
+        Map<String, String> map = new HashMap<>(4,0.5f);
 
         if ("false".equalsIgnoreCase(null)) {
 

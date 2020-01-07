@@ -1,10 +1,9 @@
-package com.sc.test.Test;
+package com.sc.test.curr;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Random;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * * @author Cloud Liu

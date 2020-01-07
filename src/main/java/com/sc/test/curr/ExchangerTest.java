@@ -1,4 +1,4 @@
-package com.sc.test.Test;
+package com.sc.test.curr;
 
 import java.util.concurrent.Exchanger;
 import java.util.concurrent.ExecutorService;

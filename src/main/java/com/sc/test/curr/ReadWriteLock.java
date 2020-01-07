@@ -1,4 +1,4 @@
-package com.sc.test.Test;
+package com.sc.test.curr;
 
 import java.util.Random;
 import java.util.concurrent.locks.ReentrantReadWriteLock;

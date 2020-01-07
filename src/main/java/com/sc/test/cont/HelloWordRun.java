@@ -1,5 +1,7 @@
 package com.sc.test.cont;
 
+import com.sc.test.config.RedisConfig;
+import com.sc.test.imp.OneHello;
 import com.sc.test.inter.HelloWorld;
 import com.sc.test.serv.HelloService;
 import org.springframework.context.ApplicationContext;
